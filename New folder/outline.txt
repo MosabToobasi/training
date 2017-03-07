@@ -1,0 +1,13 @@
+1- Variables
+2- echo and print
+3- PHP Data Types
+4- PHP 5 Strings :strlen, str_word_count, strpos, str_replace
+5- The if Statement
+6- switch Statement
+7- PHP Loops:while, do...while, for, foreach
+8- Functions
+9- Arrays,Associative 
+10- Form Handling
+11-Include Files
+12-PHP 5 Cookies
+13-PHP 5 Sessions//session_start();
