@@ -8,7 +8,7 @@
 	
 	switch ($action) {
 		case "user-login":
-			check_login($_POST['email'], $_POST['password']);
+			check_login();
 			break;		
 		case "sign-out":
 			sign_out();

@@ -1,18 +1,7 @@
 <?php
 session_start();
 
-function check_login($email, $password){
-	if($email == "user@user.com" && $password == "123456"){
-		$_SESSION["id"] = 1;
-		$_SESSION["fullname"] = "Zeiad Habbab";
-		
-		redirect('myaccount.php?sccuess=Login Success');
-	}else{
-		
-		redirect('index.php?error=Login Faild');
-	
-	}
-}
+
 
 function sign_out(){
 	session_destroy();
