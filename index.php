@@ -1,5 +1,5 @@
 <?php
-include "functions.php";
+include 'post.php';
 include "header.php";
 ?>
     <div class="slider-wrapper content-wrapper">
@@ -363,32 +363,37 @@ include "header.php";
                 </div>
             </div>
 
-            <div id="products_search_list"
-                 class="search-items pull-left">
-
+            <div class="search-items pull-left">
+				<!-- training 1-->
+				<?php 
+				$products = get_all_products(16);
+				foreach($products as $product){
+					?>
+						<a href="product.html" class="product" tabindex="0">
+                            <div class="product_content">
+                                <div class="image" style="background-image:url('images/product.jpg');"></div>
+                                <div class="details">
+                                    <div class="line name"><?php echo $product->name; ?></div>
+                                    <div class="line color"><?php echo $product->color; ?></div>
+                                    <div class="line price">
+                                        $<?php echo $product->price; ?>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+					<?php
+				 }
+				
+				
+				?>
+				
             </div>
 
             <div class="clearfix">
             </div>
 
-            <div class="search-pagination">
-                <a href="#" class="navigation arrow-left">
-                    <i class="fa fa-chevron-left"></i>
-                </a>
-                <div class="pages">
-                    <a href="#">1</a>
-                    <a href="#">2</a>
-                    <a href="#" class="selected">3</a>
-                    <a href="#">4</a>
-                    <a href="#">5</a>
-                    <a href="#">6</a>
-                    <a href="#">7</a>
-                </div>
-                <a href="#" class="navigation arrow-right">
-                    <i class="fa fa-chevron-right"></i>
-                </a>
-                <div class="clearfix"></div>
-            </div>
+             
         </div>
     </div>
 
