@@ -4,14 +4,14 @@
     <div class="product_content">
         <div class="card_front">
             <div class="image"
-                 style="background-image:url({{ product.image }});"></div>
+                 style="background-image:url();"></div>
             <div class="details">
                 <div class="line name">{{ product.name | truncate(16) }}</div>
                 <div class="line color">{{ product.color }}</div>
                 <div class="line price">${{ product.price }}</div>
             </div>
             <div class="actions">
-                <span class="specs">{{ product.specs }}</span>
+                <span class="specs"></span>
                 <span>Buy Now</span>
             </div>
             <div class="clearfix"></div>

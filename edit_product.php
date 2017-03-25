@@ -61,10 +61,26 @@ $product = get_porduct_by_id($id); //1
 					    
                         <div class="clearfix">&nbsp;</div>
 
+						
+						<div class="alert alert-success" id="product_success" style="display: none;">
+							<strong>Success!</strong>Product was edited successfully	
+						</div>
+						
+						<div class="alert alert-danger" id="product_error" style="display: none;">
+							<strong>Danger!</strong> Please correct the next errors
+							<ul>
+								<li  id="product_name_error">Insert Name</li>
+								<li  id="product_price_error">Insert Price</li>
+								<li  id="product_color_error">Insert Color</li>
+							</ul>
+						</div>
+						
+						
                         <div class="row">
                             <div class="col-xs-12 text-right">
                                 <a href="all_products.php" class="btn btn-primary">Cancel</a>
 								<button type="submit" class="btn btn-primary">Save</button>
+                                <button id="edit_product_by_ajax" type="button" class="btn btn-primary">Save by ajax</button>
                                 
                             </div>
                         </div>

@@ -1,4 +1,10 @@
 [
+	{"name":"gg","price":0,"color":"black"},
+	{"name":"erferf","price":0,"color":"red"},
+	{"name":"sdsa","price":0,"color":"red"}
+]
+
+[
   {
     "name": "Pebble Time",
     "color": "Red",

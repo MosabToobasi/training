@@ -57,7 +57,10 @@ include "header.php";
             </div>
         </div>
     </div>
-
+	<button type="button" onclick="load_data()">Change Content</button>
+	
+	<div id="sample"></div>
+	
     <div class="search-results content-wrapper">
         <div class="content">
             <form class="breadcrumb">
@@ -363,7 +366,7 @@ include "header.php";
                 </div>
             </div>
 
-            <div class="search-items pull-left">
+            <div class="search-items pull-left" id="products_search_list">
 				<!-- training 1-->
 				<?php 
 				$products = get_all_products(16);

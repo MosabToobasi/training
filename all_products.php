@@ -22,6 +22,7 @@ $products = get_all_products(1000);
 							<th>Price</th>
 							<th>Edit</th>
 							<th>Delete</th>
+							<th>Delete Ajax</th>
 						</tr>
 						<tbody>
 							<?php
@@ -29,13 +30,16 @@ $products = get_all_products(1000);
 							foreach($products as $product){
 								$i++;
 							?>	
-							<tr>
+							<tr id="tr_<?php echo $product->id; ?>">
 										<td scope="row"><?php echo $i;?></td> 
 										<td><?php echo $product->name; ?></td>
 										<td><?php echo $product->color; ?></td>
 										<td>$<?php echo $product->price; ?></td>
 										<td><a href="edit_product.php?id=<?php echo $product->id; ?>">Edit</a></td>
 										<td><a href="post.php?action=delete_product&id=<?php echo $product->id; ?>">Delete</a></td>
+										<td>
+										<!-- onclick="delete_product(<?php echo $product->id; ?>)" -->
+										<a data-sample="nokia" data-id="<?php echo $product->id; ?>" href="#"  class="delete_item">Delete Ajax</a></td>
 									</tr>
 							<?php 
 							}

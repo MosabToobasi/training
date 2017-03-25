@@ -14,6 +14,7 @@
     <script type="text/javascript" src="scripts/main.js"></script>
     <script type="text/javascript" src="scripts/cart.js"></script>
     <script type="text/javascript" src="scripts/signin.js"></script>
+    <script type="text/javascript" src="scripts/ajax.js"></script>
 
     <link rel="stylesheet" href="styles/style.css" >
     <link rel="stylesheet" href="styles/header.css" >
@@ -108,8 +109,17 @@
 
                 <form class="search-wrapper pull-right">
                     <i class="fa fa-search"></i>
-                    <input type="search" required="" placeholder="I'm looking for...">
+                    <input type="search" required="" 
+					onkeyup="showHint(this.value)" 
+					placeholder="I'm looking for...">
+ 					<p>Suggestions: <span id="txtHint"></span></p>
+					
                 </form>
+				<div id="spinner" style="display:none">
+						<i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+				</div>
+				
+				
                 <a class="sub-menu-item hidden-sm pull-right" href="#">Support</a>
                 <div class="clearfix"></div>
             </div>
