@@ -1,0 +1,43 @@
+<?php
+
+class PHP_CRUD_API_Config
+{
+    /**
+     * Configure one or more database connections as associative arrays.
+     * Tests will be run against any database connection specified here.
+     *
+     * @var array
+     */
+    public static $config = array(
+        array(
+            'dbengine' => 'MySQL',              // 'MySQL', 'SQLServer', 'PostgreSQL' or 'SQLite'
+            'hostname' => '{{test_hostname}}',  // 'localhost' for MySQL, '(Local)' for SQLServer, empty for SQLite
+            'username' => '{{test_username}}',  // May be empty on SQLServer or SQLite
+            'password' => '{{test_password}}',  // May be empty on SQLServer or SQLite
+            'database' => '{{test_database}}',  // NB: Use an empty database, data will be LOST!
+        ),
+        /* Uncomment and update for any databases you want to use.
+        array(
+            'dbengine' => 'PostgreSQL',
+            'hostname' => '{{test_hostname}}',
+            'username' => '{{test_username}}',
+            'password' => '{{test_password}}',
+            'database' => '{{test_database}}',
+        ),
+        array(
+            'dbengine' => 'SQLite',
+            'hostname' => '{{test_hostname}}',
+            'username' => '{{test_username}}',
+            'password' => '{{test_password}}',
+            'database' => '{{test_database}}',
+        ),
+        array(
+            'dbengine' => 'SQLServer',
+            'hostname' => '{{test_hostname}}',
+            'username' => '{{test_username}}',
+            'password' => '{{test_password}}',
+            'database' => '{{test_database}}',
+        ),
+        */
+    );
+}

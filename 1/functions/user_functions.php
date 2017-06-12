@@ -32,12 +32,13 @@ function new_user_ctrl(){
 		if(!is_email_exsit($email)){
 			$result = add_new_user($user_obj);//inser user to db
 			/*
-			varfiy user 
+			varfiy user // send user welcome message
 			*/
 		}else{
 			redirect("register.php?error=User alraedy exist");
 		}
 		
+		 
 		
 		
 		
@@ -72,4 +73,28 @@ function check_login(){
 		redirect('index.php?error=Login Faild');		
 	}
 }
+
+function send_mail($to,$username, $subject, $messag){
+$transport = Swift_SmtpTransport::
+newInstance('in-v3.mailjet.com', 587)
+    ->setUsername('4eab6edd1b79e426c25f942304321948') // Your Gmail Username
+    ->setPassword('04d330d932e68296535294cac95d0ac9'); // Your Gmail Password
+	
+$mailer = Swift_Mailer::newInstance($transport);
+
+// Create a message
+$message = Swift_Message::newInstance($subject)
+    ->setFrom(array('zeiad.habbab@live.com' => 'Zeiad')) // can be $_POST['email'] etc...
+    ->setTo(array($to => $username)) // your email / multiple supported.
+    ->setBody($messag, 'text/html');
+
+// Send the message
+if ($mailer->send($message)) {
+    return true;
+} else {
+    return false;
+}
+	
+}
+
 ?>
